@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7606214064450248198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1569051511267293935}
+  - component: {fileID: 6334864232295109281}
+  m_Layer: 0
+  m_Name: ChunkGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1569051511267293935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7606214064450248198}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.218191, y: -6.721262, z: 14.07324}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6334864232295109281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7606214064450248198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1274135844d979544a4a684796e818db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassPrefab: {fileID: 7680565246701319498, guid: 6a18646b25dee4e4cb29e658654a8225, type: 3}
+  dirtPrefab: {fileID: 7680565246701319498, guid: 2e86ddfcd2db59447b2d577e1763191b, type: 3}
+  stonePrefab: {fileID: 7680565246701319498, guid: 273494c866179834f8a73638cf0eab68, type: 3}
+  bedrockPrefab: {fileID: 7680565246701319498, guid: 543ae353933710d43a97000f290703be, type: 3}
+  chunkSize: 16
+  maxHeight: 40
+  noiseScale: 0.05
+  ChunkWorldPosition: {x: 0, y: 0, z: 0}
+  seed: 123
