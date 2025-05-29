@@ -8,6 +8,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody RB;
     private float cameraVerticalAngle = 0f;
 
+    private bool canJump = false;
+    [SerializeField] private LayerMask groundMask;
+    [SerializeField] private float checkRadius;
+    [SerializeField] private Transform groundCheck;
 
     [SerializeField] private Transform playerCamera;
     [SerializeField] private float mouseSensitivity = 100f;
@@ -26,6 +30,7 @@ public class PlayerController : MonoBehaviour
         PlayerMovement(speed);
         PlayerJump(jumpForce);
         MouseRotaion();
+        canJump = Physics.Raycast(groundCheck.position, Vector3.down, checkRadius, groundMask);
     }
 
     void PlayerMovement(float MovementSpeed) 
@@ -39,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
     void PlayerJump(float JumpForce) 
     {
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (Input.GetKeyDown(KeyCode.Space) && canJump) 
         {
             Debug.Log("Jump pressed");
             RB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
